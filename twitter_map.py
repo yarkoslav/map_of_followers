@@ -67,7 +67,7 @@ def twitter_map():
     """
     name = request.form.get("screen_name")
     bearer_token = request.form.get("bearer_token")
-    if not name:
+    if not name or not bearer_token:
         return render_template("failure.html")
     create_map(get_data_about_friends(name, bearer_token))
     return render_template("map.html")
