@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>Twitter map</h1>
+<form action="/twitter_map" method="post">
+    <input name="screen_name" placeholder="Screen Name" type="text"/>
+    <input name="bearer_token" placeholder="Bearer Token" type="text"/>
+    <input type="submit" value="Create">
+</form>
+{% endblock %}
